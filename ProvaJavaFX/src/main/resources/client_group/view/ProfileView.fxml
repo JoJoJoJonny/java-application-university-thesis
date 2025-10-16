@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="client_group.controller.ProfileController">
+
+    <!-- Intestazione -->
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 30 0 10 0;">
+            <Label fx:id="welcomeLabel" text="Here is your profile, ExampleName!"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <Separator prefWidth="400"/>
+        </VBox>
+    </top>
+
+    <!-- Dati profilo in stile scheda -->
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <GridPane hgap="20" vgap="15" style="-fx-border-color: #ccc; -fx-border-radius: 6; -fx-padding: 25; -fx-background-color: #f9f9f9; -fx-background-radius: 6;">
+                <Label text="📧 Email:" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                <Label fx:id="emailLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="👤 Name:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                <Label fx:id="nameLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="👥 Surname:" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                <Label fx:id="surnameLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="📞 Phone:" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                <Label fx:id="phoneLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <VBox spacing="10" fx:id="tasksBox">
+                <Label fx:id="assignedTaskLabel" text="Assigned tasks:" style="-fx-font-weight: bold;"/>
+                <TableView fx:id="tasksTable" prefHeight="200">
+                    <columns>
+                        <TableColumn fx:id="orderIdCol" text="Order ID" />
+                        <TableColumn fx:id="machineryCol" text="Machinery" />
+                        <TableColumn fx:id="stepCol" text="Step Index" />
+                        <TableColumn fx:id="startCol" text="Start" />
+                        <TableColumn fx:id="endCol" text="End" />
+                    </columns>
+                </TableView>
+            </VBox>
+        </VBox>
+
+    </center>
+
+    <!-- Azioni -->
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10" style="-fx-padding: 20 30 30 0;">
+            <Button text="Edit" onAction="#handleEdit" />
+            <Button text="Delete" onAction="#handleDelete"
+                    style="-fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

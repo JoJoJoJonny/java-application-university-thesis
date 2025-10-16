@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<AnchorPane fx:id="contentPane" xmlns:fx="http://javafx.com/fxml" fx:controller="client_group.controller.GanttController">
+    <VBox spacing="10"
+          AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0"
+          style="-fx-background-color: red;">
+        <HBox spacing="10" style="-fx-background-color: lightblue;">
+            <Button fx:id="filterButton" text="Filtra per Ordini" onAction="#onFilterButtonClick"
+                    style="-fx-background-color: orange; -fx-text-fill: black;"/>
+        </HBox>
+        <ScrollPane fx:id="ganttScrollPane" VBox.vgrow="ALWAYS" fitToWidth="true" fitToHeight="true"/>
+    </VBox>
+
+</AnchorPane>

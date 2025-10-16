@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="client_group.controller.AuthController"
+            prefWidth="400" prefHeight="400">
+
+    <top>
+        <HBox alignment="CENTER_LEFT">
+            <Button text="← back" onAction="#handleBack" />
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="User Registration" style="-fx-font-size: 18px;" />
+
+            <TextField fx:id="emailField" promptText="Email" />
+            <PasswordField fx:id="passwordField" promptText="Password" />
+            <TextField fx:id="nameField" promptText="Name" />
+            <TextField fx:id="surnameField" promptText="Surname" />
+            <TextField fx:id="phoneField" promptText="Phone" />
+
+            <ComboBox fx:id="roleComboBox" promptText="Select Role">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="MANAGER" />
+                        <String fx:value="EMPLOYEE" />
+                        <String fx:value="ACCOUNTANT" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+
+            <Button text="Register" onAction="#handleRegister" />
+            <Label fx:id="statusLabel" textFill="red" />
+        </VBox>
+    </center>
+</BorderPane>

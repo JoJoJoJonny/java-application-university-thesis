@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="client_group.controller.DashboardController">
+
+    <!-- Navbar laterale -->
+    <left>
+        <VBox spacing="10" prefWidth="150" style="-fx-background-color: #2C3E50;" alignment="TOP_CENTER">
+            <Button text="Notice Board" fx:id="btnNoticeBoard" onAction="#handleNoticeBoard" style="-fx-text-fill: black;" maxWidth="130" />
+            <Button text="Profile" fx:id="btnProfile" onAction="#handleProfile" style="-fx-text-fill: black;" maxWidth="130" />
+            <Button text="Employees" fx:id="btnEmployees" onAction="#handleEmployees" style="-fx-text-fill: black;" maxWidth="130" />
+            <Button text="Gantt" fx:id="btnGantt" onAction="#handleGantt" style="-fx-text-fill: black;" maxWidth="130" />
+            <Button text="Clients" fx:id="btnClients" onAction="#handleClients" style="-fx-text-fill: black" maxWidth="130"/>
+            <Button text="Orders" fx:id="btnOrders" onAction="#handleOrders" style="-fx-text-fill: black;" maxWidth="130" />
+            <Button text="Models" fx:id="btnModels" onAction="#handleModels" style="-fx-text-fill: black;" maxWidth="130" />
+            <Button text="Processes" fx:id="btnProcesses" onAction="#handleProcesses" style="-fx-text-fill: black;" maxWidth="130" />
+            <Button text="Machinery" fx:id="btnMachinery" onAction="#handleMachinery" style="-fx-text-fill: black;" maxWidth="130" />
+            <Button text="Inventory" fx:id="btnInventory" onAction="#handleInventory" style="-fx-text-fill: black;" maxWidth="130" />
+            <Region VBox.vgrow="ALWAYS"/> <!-- spazio flessibile -->
+            <Button text="Logout" id="btnLogout" onAction="#handleLogout" style="-fx-text-fill: red;" maxWidth="130" />
+        </VBox>
+    </left>
+
+    <!-- Contenuto centrale -->
+    <center>
+        <AnchorPane fx:id="contentPane" />
+    </center>
+</BorderPane>

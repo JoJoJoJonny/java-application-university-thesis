@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="client_group.controller.EmployeeListController"
+            prefWidth="600" prefHeight="400">
+
+    <VBox spacing="15" alignment="TOP_LEFT"
+          AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+
+        <Label text="Registered Employees" style="-fx-font-size: 20px;" />
+
+        <TableView fx:id="employeeTable" prefHeight="300" prefWidth="560">
+            <columns>
+                <TableColumn fx:id="emailColumn" text="Email" prefWidth="180"/>
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="120"/>
+                <TableColumn fx:id="surnameColumn" text="Surname" prefWidth="120"/>
+                <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="120"/>
+            </columns>
+        </TableView>
+
+    </VBox>
+
+</AnchorPane>

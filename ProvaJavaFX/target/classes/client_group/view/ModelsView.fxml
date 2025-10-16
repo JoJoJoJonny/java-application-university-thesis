@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="client_group.controller.ModelController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Model Inventory" style="-fx-font-size: 18px;" />
+        </HBox>
+    </top>
+
+    <center>
+        <TableView fx:id="modelTable" prefHeight="300" prefWidth="600">
+            <columns>
+                <TableColumn fx:id="nameCol" text="Name" prefWidth="200" />
+                <TableColumn fx:id="priceCol" text="Price" prefWidth="100" />
+                <TableColumn fx:id="rawIdCol" text="RawId Material" prefWidth="200" />
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <VBox spacing="5">
+            <HBox alignment="CENTER" spacing="10">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                <Button text="Refresh" onAction="#handleRefresh"/>
+                <Button text="Add New" onAction="#handleAdd"/>
+                <Button text="Edit" onAction="#handleEdit" />
+                <Button text="Delete Selected" onAction="#handleDelete"/>
+            </HBox>
+            <Label fx:id="statusLabel" alignment="CENTER" />
+        </VBox>
+    </bottom>
+
+</BorderPane>
